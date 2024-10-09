@@ -1,0 +1,310 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Excellent Writers</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            line-height: 1.6;
+            background: linear-gradient(to bottom, #e0f7fa, #fffde7);
+            color: #2e7d32; /* Green text */
+        }
+
+        .top-ribbon {
+            background: #00796b;
+            color: #ffffff;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 10px 20px;
+        }
+
+        .top-ribbon button {
+            background-color: #4CAF50;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            padding: 10px 15px;
+            cursor: pointer;
+            font-weight: bold;
+        }
+
+        .top-ribbon button:hover {
+            background-color: #45a049;
+        }
+
+        .logo-container {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        .logo-title {
+            margin: 2px 0; /* Reduced margin */
+            font-weight: bold;
+            color: #1e3a8a;
+            font-size: 28px; /* Increased font size */
+        }
+
+        .logo-subtitle {
+            font-size: 14px;
+            color: #ff6b6b;
+        }
+
+        nav {
+            background: #ffffff; /* White background for the nav */
+            padding: 10px 0;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+        }
+
+        nav ul {
+            list-style: none;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        nav li {
+            margin: 0 10px;
+        }
+
+        nav a {
+            color: black; /* Black text */
+            text-decoration: none;
+            padding: 10px 15px;
+            border: 2px solid #00796b; /* Bounded button */
+            border-radius: 5px;
+            font-weight: bold; /* Bold text */
+            transition: background-color 0.3s;
+        }
+
+        nav a:hover {
+            background: rgba(0, 121, 107, 0.1);
+        }
+
+        section {
+            padding: 20px;
+            margin: 10px;
+            background: #ffffff; /* Light cream background for sections */
+            border-radius: 5px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+
+        .footer {
+            text-align: center;
+            padding: 10px 0;
+            background: #00796b;
+            color: #ffffff;
+            position: relative;
+            bottom: 0;
+            width: 100%;
+        }
+
+        .footer a {
+            color: #ffffff; /* White text for links */
+            text-decoration: none;
+            margin: 0 10px;
+        }
+
+        .chat-button {
+            position: fixed;
+            bottom: 20px;
+            right: 20px;
+            background-color: #4CAF50;
+            color: white;
+            border: none;
+            border-radius: 50%;
+            width: 50px;
+            height: 50px;
+            font-size: 24px;
+            cursor: pointer;
+        }
+
+        .chat-container {
+            display: none;
+            position: fixed;
+            bottom: 80px;
+            right: 20px;
+            width: 300px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            background: white;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+        }
+
+        .chat-header {
+            background: #00796b;
+            color: white;
+            padding: 10px;
+            text-align: center;
+            border-radius: 5px 5px 0 0;
+        }
+
+        .chat-body {
+            padding: 10px;
+            max-height: 200px;
+            overflow-y: auto;
+        }
+
+        .chat-input {
+            display: flex;
+            padding: 5px;
+        }
+
+        .chat-input input {
+            flex: 1;
+            padding: 5px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            margin-right: 5px;
+        }
+
+        .chat-input button {
+            padding: 5px 10px;
+            border: none;
+            background: #4CAF50;
+            color: white;
+            border-radius: 5px;
+        }
+
+        .download-button {
+            background-color: #00796b;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            padding: 10px 15px;
+            cursor: pointer;
+            font-weight: bold;
+            margin-top: 10px;
+        }
+
+        .download-button:hover {
+            background-color: #005b4f;
+        }
+    </style>
+</head>
+
+<body>
+
+<div class="top-ribbon">
+    <button onclick="alert('Login clicked!');">Login</button>
+    <div class="logo-container">
+        <svg class="logo" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 300 200" height="1in">
+            <rect width="300" height="200" fill="#f0f8ff"/>
+            <rect x="75" y="70" width="150" height="100" fill="#4a86e8" rx="10"/>
+            <rect x="65" y="170" width="170" height="15" fill="#3a76d8" rx="5"/>
+            <rect x="90" y="85" width="120" height="3" fill="#ffffff"/>
+            <rect x="90" y="100" width="100" height="3" fill="#ffffff"/>
+            <rect x="90" y="115" width="110" height="3" fill="#ffffff"/>
+            <path d="M180 130 L195 115 L240 115 L255 130 L240 145 L195 145 Z" fill="#ff6b6b"/>
+            <path d="M195 115 L210 130 L195 145" fill="#ee5253"/>
+            <path d="M150 70 L180 55 L150 40 L120 55 Z" fill="#ffd700"/>
+            <rect x="145" y="70" width="10" height="20" fill="#ffd700"/>
+            <path d="M145 90 Q150 97 155 90" stroke="#ffd700" stroke-width="3" fill="none"/>
+            <path d="M155 70 Q160 80 165 75" stroke="#333333" stroke-width="2" fill="none"/>
+        </svg>
+        <p class="logo-title">Excellent Writers</p>
+        <p class="logo-subtitle">Your Trusted Writing Partner</p>
+    </div>
+    <button onclick="alert('Register clicked!');">Register</button>
+</div>
+
+<nav>
+    <ul>
+        <li><a href="#home">Home</a></li>
+        <li><a href="#about">About Us</a></li>
+        <li><a href="#services">Our Services</a></li>
+        <li><a href="#support">Support</a></li>
+        <li><a href="#contact">Contact Us</a></li>
+    </ul>
+</nav>
+
+<section id="home">
+    <h2>Your Trusted Writing Partner</h2>
+    <p>Providing high-quality writing services with 24/7 support.</p>
+    <button onclick="alert('Get Started!');">Get Started</button>
+</section>
+
+<section id="about">
+    <h2>About Us</h2>
+    <p>At Excellent Writers, we are dedicated to delivering top-notch writing services tailored to your needs. Our team consists of experienced writers committed to excellence.</p>
+</section>
+
+<section id="services">
+    <h2>Our Services</h2>
+    <ul>
+        <li>Academic Writing</li>
+        <li>Business Writing</li>
+        <li>Report Writing</li>
+        <li>Research and Data Analysis</li>
+        <li>Online Tutoring</li>
+        <li>Blogging</li>
+        <li>Creative Writing</li>
+        <li>Freelance Opportunities</li>
+    </ul>
+</section>
+
+<section id="contact">
+    <h2>Contact Us</h2>
+    <form id="contactForm" action="submit.php" method="POST">
+        <div class="input-group">
+            <label for="clientName">Your Name:</label>
+            <input type="text" id="clientName" name="clientName" placeholder="Enter your name" required>
+        </div>
+        <div class="input-group">
+            <label for="clientEmail">Your Email:</label>
+            <input type="email" id="clientEmail" name="clientEmail" placeholder="Enter your email" required>
+        </div>
+        <button type="submit">Submit</button>
+    </form>
+    <button class="download-button" onclick="window.location.href='download-link';">Download the Mobile App</button>
+</section>
+
+<div class="chat-button" onclick="toggleChat()">💬</div>
+<div class="chat-container" id="chatContainer">
+    <div class="chat-header">Chat with Us</div>
+    <div class="chat-body" id="chatBody"></div>
+    <div class="chat-input">
+        <input type="text" id="chatMessage" placeholder="Type a message...">
+        <button onclick="sendChatMessage()">Send</button>
+    </div>
+</div>
+
+<footer class="footer">
+    <p>© 2024 Excellent Writers. All rights reserved.</p>
+    <p>
+        <a href="https://www.facebook.com/profile.php?id=61558936770731&sk=about">Facebook</a> |
+        <a href="https://www.tiktok.com/@excellentwriters14?lang=en">TikTok</a> |
+        <a href="mailto:excelwriters0017@gmail.com">Email Us</a>
+    </p>
+</footer>
+
+<script>
+    function toggleChat() {
+        const chatContainer = document.getElementById('chatContainer');
+        chatContainer.style.display = chatContainer.style.display === 'none' || chatContainer.style.display === '' ? 'block' : 'none';
+    }
+
+    function sendChatMessage() {
+        const messageInput = document.getElementById('chatMessage');
+        const chatBody = document.getElementById('chatBody');
+        const message = messageInput.value;
+        
+        if (message) {
+            const messageElement = document.createElement('div');
+            messageElement.textContent = message;
+            chatBody.appendChild(messageElement);
+            messageInput.value = '';
+            chatBody.scrollTop = chatBody.scrollHeight; // Scroll to bottom
+        }
+    }
+</script>
+
+</body>
+</html>
